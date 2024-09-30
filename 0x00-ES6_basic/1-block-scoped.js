@@ -1,11 +1,9 @@
 export default function taskBlock(trueOrFalse) {
-  let task = false;
-  let task2 = true;
+  const task = false;//false
+  const task2 = true;//true
 
   if (trueOrFalse) {
-    let task = true; // متغير جديد داخل الكتلة الشرطية
-    let task2 = false; // متغير جديد داخل الكتلة الشرطية
+    return [task, task2];
   }
-
-  return [task, task2]; // القيم الخارجية لا تتأثر بالكتلة الشرطية
+  return [task, task2];
 }
