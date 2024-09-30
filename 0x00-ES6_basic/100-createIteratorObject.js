@@ -1,13 +1,10 @@
-// 100-createIteratorObject.js
-
-const createIteratorObject = (report) => {
-  const employees = [];
-
-  for (const department in report.allEmployees) {
-    employees.push(...report.allEmployees[department]);
+export default function createIteratorObject(report) {
+  let allEmployees = [];
+  for (const item of Object.values(report.allEmployees)) {
+    allEmployees = [
+      ...allEmployees,
+      ...item,
+    ];
   }
-
-  return employees[Symbol.iterator]();
-};
-
-export default createIteratorObject;
+  return allEmployees;
+}

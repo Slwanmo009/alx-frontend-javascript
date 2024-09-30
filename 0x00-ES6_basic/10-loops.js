@@ -1,13 +1,7 @@
-// 10-loops.js
-
-const appendToEachArrayValue = (array, appendString) => {
-  const newArray = [];
-  
+export default function appendToEachArrayValue(array, appendString) {
+  const end = [];
   for (const value of array) {
-    newArray.push(appendString + value);
+    end.push(appendString + value);
   }
-  
-  return newArray;
-};
-
-export default appendToEachArrayValue;
+  return end;
+}
